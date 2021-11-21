@@ -1,0 +1,82 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIR_Filter_unfolded
+Version: O-2018.06-SP4
+Date   : Mon Nov 22 00:59:52 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: B0[1] (input port clocked by MY_CLK)
+  Endpoint: DP/mult00_reg/REG_OUT_reg[22]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FIR_Filter_unfolded
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  B0[1] (in)                                              0.00       0.50 f
+  DP/B0[1] (FIR_Filter_dp_unfolded)                       0.00       0.50 f
+  DP/mult_137/a[1] (FIR_Filter_dp_unfolded_DW_mult_tc_24)
+                                                          0.00       0.50 f
+  DP/mult_137/U341/ZN (INV_X1)                            0.06       0.56 r
+  DP/mult_137/U336/Z (XOR2_X2)                            0.16       0.71 r
+  DP/mult_137/U497/ZN (NAND2_X1)                          0.12       0.83 f
+  DP/mult_137/U376/ZN (OAI22_X1)                          0.08       0.91 r
+  DP/mult_137/U81/S (HA_X1)                               0.05       0.96 f
+  DP/mult_137/U23/CO (FA_X1)                              0.10       1.06 f
+  DP/mult_137/U22/CO (FA_X1)                              0.09       1.16 f
+  DP/mult_137/U21/CO (FA_X1)                              0.09       1.25 f
+  DP/mult_137/U20/CO (FA_X1)                              0.09       1.34 f
+  DP/mult_137/U19/CO (FA_X1)                              0.09       1.43 f
+  DP/mult_137/U18/CO (FA_X1)                              0.09       1.52 f
+  DP/mult_137/U17/CO (FA_X1)                              0.09       1.61 f
+  DP/mult_137/U16/CO (FA_X1)                              0.09       1.70 f
+  DP/mult_137/U15/CO (FA_X1)                              0.09       1.79 f
+  DP/mult_137/U14/CO (FA_X1)                              0.09       1.88 f
+  DP/mult_137/U13/CO (FA_X1)                              0.09       1.97 f
+  DP/mult_137/U12/CO (FA_X1)                              0.09       2.06 f
+  DP/mult_137/U11/CO (FA_X1)                              0.09       2.15 f
+  DP/mult_137/U10/CO (FA_X1)                              0.09       2.24 f
+  DP/mult_137/U9/CO (FA_X1)                               0.09       2.33 f
+  DP/mult_137/U8/CO (FA_X1)                               0.09       2.42 f
+  DP/mult_137/U7/CO (FA_X1)                               0.09       2.52 f
+  DP/mult_137/U6/CO (FA_X1)                               0.09       2.61 f
+  DP/mult_137/U5/CO (FA_X1)                               0.09       2.70 f
+  DP/mult_137/U4/S (FA_X1)                                0.13       2.83 r
+  DP/mult_137/product[22] (FIR_Filter_dp_unfolded_DW_mult_tc_24)
+                                                          0.00       2.83 r
+  DP/mult00_reg/REG_IN[22] (REG_mul_0)                    0.00       2.83 r
+  DP/mult00_reg/U11/ZN (NAND2_X1)                         0.03       2.85 f
+  DP/mult00_reg/U10/ZN (OAI21_X1)                         0.03       2.89 r
+  DP/mult00_reg/REG_OUT_reg[22]/D (DFFR_X1)               0.01       2.89 r
+  data arrival time                                                  2.89
+
+  clock MY_CLK (rise edge)                               10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.07       9.93
+  DP/mult00_reg/REG_OUT_reg[22]/CK (DFFR_X1)              0.00       9.93 r
+  library setup time                                     -0.04       9.89
+  data required time                                                 9.89
+  --------------------------------------------------------------------------
+  data required time                                                 9.89
+  data arrival time                                                 -2.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        7.00
+
+
+1
